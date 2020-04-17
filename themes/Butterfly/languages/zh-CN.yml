@@ -15,7 +15,7 @@ page:
   articles: 文章总览
   tag: 标签
   category: 分类
-  archives: 归档
+  archives: 时间轴
 
 sticky: 置顶
 no_title: 无题
@@ -65,7 +65,7 @@ aside:
   card_recent_post: 最新文章
   card_bookmark: 加入书签
   card_webinfo:
-    headline: 网站资讯
+    headline: 网站信息
     article_name: 文章数目
     runtime_name: 已运行时间
     site_wordcount: 本站总字数

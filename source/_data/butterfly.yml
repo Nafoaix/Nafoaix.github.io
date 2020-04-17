@@ -5,15 +5,16 @@
 # xxx || icon:
 #   xxx || 連結 || icon
 menu:
-  Home: / || fa fa-home
-  Archives: /archives/ || fa fa-archive
-  Tags: /tags/ || fa fa-tags
+  主页: / || fa fa-home
+  时间轴: /archives/ || fa fa-archive
+  # Tags: /tags/ || fa fa-tags
   # Categories: /categories/ || fa fa-folder-open
   # Link: /link/ || fa fa-link
   # List||fa fa-list:
   #   - Music || /music/ || fa fa-music
   #   - Movie || /movies/ || fa fa-film
-  About: /about/ || fa fa-heart
+  留言板: /msgboard/ || fa fa-coffee
+  关于我: /about/ || fa fa-heart
 
 # Favicon
 # ---------------
@@ -532,7 +533,7 @@ subtitle:
   # (如果有英文逗號' , '，請使用轉義字符 &#44;)
   # 如果關閉打字效果，subtitle只會顯示sub的第一行文字
   sub:
-    - 爱生活&#44;有理想&#44;会思考&#44;能沟通
+    - 爱生活 有理想 会思考 能沟通
     # - Never put off till tomorrow what you can do today
 
 # fontawesome圖標
@@ -557,7 +558,7 @@ aside:
 
 # 網站公告
 announcement:
-  content: 欢迎来到我的小空间，可以点击上方图标联系我哦~
+  content: 欢迎来到我的小空间，可以点击上方图标联系我或在留言板给我留言。
 
 # busuanzi count for PV / UV in site
 # 訪問人數
@@ -654,7 +655,7 @@ note:
   #  - modern    bs-callout new (v2-v3) alert style.
   #  - flat      flat callout style with background, like on Mozilla or StackOverflow.
   #  - disabled  disable all CSS styles import of note tag.
-  style: flat
+  style: modern
   icons: true
   border_radius: 3
   # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
