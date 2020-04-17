@@ -1,7 +1,10 @@
 $(function () {
   var loadFlag = false
   $('a.social-icon.search').on('click', function () {
-    $('body').css({ width: '100%', overflow: 'hidden' })
+    $('body').css({
+      width: '100%',
+      overflow: 'hidden'
+    })
     $('.search-dialog').css('display', 'block')
     $('#local-search-input input').focus()
     $('.search-mask').fadeIn()
@@ -11,7 +14,7 @@ $(function () {
     }
 
     // shortcut: ESC
-    document.addEventListener('keydown', function f (event) {
+    document.addEventListener('keydown', function f(event) {
       if (event.code === 'Escape') {
         closeSearch()
         document.removeEventListener('keydown', f)
@@ -39,9 +42,9 @@ $(function () {
   }
   $('.search-mask, .search-close-button').on('click touchstart', closeSearch)
 
-  function search (path) {
+  function search(path) {
     $.ajax({
-      url: GLOBAL_CONFIG.root + path,
+      url: "https://cdn.jsdelivr.net/gh/nafoaix/myblog/search.xml",
       dataType: 'xml',
       success: function (xmlResponse) {
         // get the contents from search data
