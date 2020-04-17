@@ -4,12 +4,12 @@
 
 # Site
 title: Nafx
-subtitle: "Nafx的个人博客"
-description: ""
-keywords:
+subtitle: Nafx的个人博客
+description: 欢迎来到我的小空间，如果你喜欢本网站，请支持我！^_^"
+keywords: [Nafx, Blog, 个人博客, 生活, 代码, 游戏, 美食, 心情]
 author: Nafx
 language: zh-CN
-timezone: "Asia/Shanghai"
+timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -99,3 +99,13 @@ theme: Butterfly
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: ""
+
+# 创建站点地图文件
+Plugins:
+  - hexo-generator-baidu-sitemap
+  - hexo-generator-sitemap
+
+baidusitemap:
+  path: baidusitemap.xml
+sitemap:
+  path: sitemap.xml
