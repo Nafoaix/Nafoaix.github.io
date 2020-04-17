@@ -4,13 +4,29 @@
   
     
     <entry>
-      <title>HelloWorld</title>
-      <link href="/2020/04/16/HelloWorld/"/>
-      <url>/2020/04/16/HelloWorld/</url>
+      <title>Git学习笔记</title>
+      <link href="/2020/04/17/Learngit_Note/"/>
+      <url>/2020/04/17/Learngit_Note/</url>
       
-        <content type="html"><![CDATA[<p>开头语</p><p>初来乍到的萌新们，刚到Github，你们是不是一脸懵逼？我是谁？我在哪？我要干哈？ Github是全球最大的 同性交友平台 代码托管平台，在这里你可以看到各种大佬，例如国内最大的MC红石服务器TIS的插件开发组@TISUnion，或者是我们再熟悉不过了的微软Microsoft；当然不只是代码，Github里面也有各种文化仓库，这里举个很好玩的仓库作为例子——表情包仓库ChineseBQB，可谓是表情包的聚集地；Github上甚至还有你想不到的项目（是什么项目我就不说了，自己点我查看）</p><p>接下来，我就来跟你讲讲Github怎么使用。话不多说，让我们开始吧<br>主页管理</p><p>当你注册完Github并登录后，Github会将你带到首页，这里有点类似很多服务器的仪表盘吧（如图）</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="Git-学习笔记"><a href="#Git-学习笔记" class="headerlink" title="Git 学习笔记"></a>Git 学习笔记</h1><div class="note info">            <p>作为一个刚接触 Git 不久的小白，该笔记是这两天我在网上看视频和教程自己总结记录下来的，主要为了方便未来自己查阅和帮助像我一样的小白学习 Git。文章中斜体部分为我自己方便记忆的理解，如有错误还请指正，见谅！</p>          </div><h2 id="Git-的一点介绍"><a href="#Git-的一点介绍" class="headerlink" title="Git 的一点介绍"></a>Git 的一点介绍</h2><h3 id="Git-下载地址："><a href="#Git-下载地址：" class="headerlink" title="Git 下载地址："></a>Git 下载地址：</h3><p><code>https://git-scm.com/</code></p><h3 id="Git-是什么"><a href="#Git-是什么" class="headerlink" title="Git 是什么"></a>Git 是什么</h3><p>&emsp;百度百科的介绍是：</p><blockquote><p>Git 是一个开源的分布式版本控制系统，可以有效、高速地处理从很小到非常大的项目版本管理。</p></blockquote><p><em>可以理解为一个小秘书来帮你打理你的项目，让你专注于项目上，而不是被错综复杂的项目版本和文件弄晕。</em></p><h3 id="Git-记录的是什么"><a href="#Git-记录的是什么" class="headerlink" title="Git 记录的是什么"></a>Git 记录的是什么</h3><p>&emsp;集中式版本控制系统 SVN 记录的是每一次版本变动的内容，Git 则是将项目的每个版本独立保存。Git 通过维护 <strong>工作区域</strong> <strong>暂存区域</strong> <strong>Git 仓库</strong> 来实现版本控制。<em>你可以理解为三座在本地的仓库。</em></p><h3 id="Git-管理的文件的三种状态"><a href="#Git-管理的文件的三种状态" class="headerlink" title="Git 管理的文件的三种状态"></a>Git 管理的文件的三种状态</h3><ul><li>已修改（modified）</li><li>已暂存（staged）</li><li>已提交（committed）</li></ul><h2 id="Git-的使用流程"><a href="#Git-的使用流程" class="headerlink" title="Git 的使用流程"></a>Git 的使用流程</h2><h3 id="Git-初始化"><a href="#Git-初始化" class="headerlink" title="Git 初始化"></a>Git 初始化</h3><p>&emsp;和游戏或 APP 一样，下载完之后要在命令行或在 GitBash 中输入以下命令来注册个账号<br>&emsp; <code>git config --global user.name &quot;你随便起的ID&quot;</code><br>&emsp; <code>git config --global user.email &quot;你的邮箱&quot;</code><br>&emsp;使用时首先要在工作的文件夹初始化 Git，你可以在命令行中进入工作文件夹目录也可以以直接在文件夹右键选择 Git Bash Here 然后输入：<br>&emsp;<code>git init</code><br>&emsp;<em>这样就相当于你告诉了 git：“这个文件夹需要你帮我管理。”</em><br>&emsp;这里就成了这个项目的根目录，也就是<strong>工作区域</strong>。初始化完成后该目录下会多了一个<code>.git</code>的目录，这个目录就是 Git 用来跟踪管理版本库的，没事不要手动修改这个目录里的文件。（如果没看到也没关系，因为该目录默认是隐藏的。）</p><h3 id="提交文件"><a href="#提交文件" class="headerlink" title="提交文件"></a>提交文件</h3><ul><li><p>当你对项目进行一顿操作后可以使用<br><code>git add 文件名 ---就是将指定文件添加到暂存区</code><br><code>git add ./-A/--all/* ---可以提交工作区中所有的文件</code><br>将文件添加到<strong>暂存区</strong>，也就是上面提到三座仓库中的第二座，这个区域区如其名，只是临时保存你的改动。<br><em>可以理解为你告诉秘书：“这些你先帮我记着点。”</em></p></li><li><p>当你完成了某个改动、变更了某项设置、写完了一个章节就可以使用<br><code>git commit -m &quot;提交说明(你干了啥)&quot;</code><br>&emsp;将暂存区文件提交到 <strong>Git 仓库</strong>，也就是上面提到的本地的第三座仓库。就相当于你告诉秘书：<em>“这些你都帮我打印出来存个档。”</em><br>&emsp;<em>提交说明就相当于一个档案上贴的小标签比如‘三年二班期末考试成绩’方便自己或别人查阅仓库中存档的档案</em></p></li></ul><h3 id="查看状态与提交历史"><a href="#查看状态与提交历史" class="headerlink" title="查看状态与提交历史"></a>查看状态与提交历史</h3><ul><li><code>git status</code>可以查看目前工作区和暂存区的状态。 <em>就相当于你把秘书叫过来核对下</em><br> 当你在工作区新增了某些文件后使用此命令秘书就会告诉你:<br><code>Untracked files: (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)</code><br><em>“你放了个文件进来怎么都不和我说一声，快用 add 命令添加进仓库里。”</em>:</li></ul><p>当你在工作区删除或者更改了某些文件后使用此命令秘书就会告诉你:<br><code>Changes not staged for commit:</code><br><code>(use &quot;git add/rm &lt;file&gt;...&quot; to update what will be committed)</code><br><code>(use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)</code><br><em>“你的工作区和我上次过来的时候不一样了，某某文件删掉了，某某文件变更了，你确定这么操作就和我说一声。”</em>:</p><ul><li><code>git log</code> 可以查看 <strong>Git 仓库</strong> 的历史提交记录。记录中会显示你每次 commit 到 <strong>Git 仓库</strong> 的历史记录，包含每次提交的 id、提交人、日期、提交说明等信息。</li></ul>]]></content>
       
       
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+          <category> Git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Git </tag>
+            
+            <tag> 学习笔记 </tag>
+            
+        </tags>
       
     </entry>
     
