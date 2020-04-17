@@ -44,7 +44,7 @@ $(function () {
 
   function search(path) {
     $.ajax({
-      url: "https://cdn.jsdelivr.net/gh/nafoaix/myblog/search.xml",
+      url: GLOBAL_CONFIG.root + path,
       dataType: 'xml',
       success: function (xmlResponse) {
         // get the contents from search data

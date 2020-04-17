@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://nafx.top/myblog/msgboard/index.html</loc>
+    
+    <lastmod>2020-04-17T17:32:52.333Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://nafx.top/myblog/2020/04/17/Learngit_Note/</loc>
     
-    <lastmod>2020-04-17T10:22:38.269Z</lastmod>
+    <lastmod>2020-04-17T17:32:52.301Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nafx.top/myblog/about/index.html</loc>
+    
+    <lastmod>2020-04-17T17:32:52.301Z</lastmod>
     
   </url>
   
