@@ -1,5 +1,5 @@
 ---
-title: Git学习笔记(一)从本地库开始
+title: Git学习笔记(一)-从本地库开始
 tags:
   - Git
   - 学习笔记
@@ -11,7 +11,7 @@ cover: "https://cdn.jsdelivr.net/gh/Nafoaix/myblog@master/source/images/cover/gi
 date: 2020-04-17 16:52:59
 ---
 
-# Git 学习笔记
+# Git 学习笔记(一)
 
 {% note info %}
 作为一个刚接触 Git 不久的小白，该笔记是这两天我在网上看视频和教程自己总结记录下来的，主要为了方便未来自己查阅和帮助像我一样的小白学习 Git。文章中斜体部分为我自己方便记忆的理解，如有错误还请指正，见谅！
