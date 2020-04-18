@@ -106,6 +106,6 @@ Plugins:
   - hexo-generator-sitemap
 
 baidusitemap:
-  path: baidusitemap.xml
+  path: nafx.xml
 sitemap:
   path: sitemap.xml
