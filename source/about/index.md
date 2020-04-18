@@ -1,9 +1,10 @@
 ---
 title: 关于我
 date: 2020-04-17 19:17:11
+comments: false
 ---
 
-{% note primary no-icon %}
+{% note info no-icon %}
 
 ## <i class="fa fa-id-card-o" aria-hidden="true"></i> 个人信息
 
