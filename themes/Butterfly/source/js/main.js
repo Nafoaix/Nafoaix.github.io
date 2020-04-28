@@ -6,14 +6,14 @@ $(function () {
 
   /**
    * 當menu過多時，自動適配，避免UI錯亂
-   * 傳入 1 sidebar打開時
+    * 傳入 1 sidebar打開時
    * 傳入 2 正常狀態下
    */
   var blogNameWidth = $('#blog_name').width()
   var menusWidth = $('.menus').width()
   var sidebarWidth = $('#sidebar').width()
 
-  function isAdjust(n) {
+  function isAdjust (n) {
     var t
     if (n === 1) {
       t = blogNameWidth + menusWidth > $pageHead.width() - sidebarWidth - 20
@@ -25,29 +25,26 @@ $(function () {
     else headerAdjustBack()
   }
 
-  function headerAdjust() {
+  function headerAdjust () {
     $pageHead.find('.toggle-menu').addClass('is-visible-inline')
     $pageHead.find('.menus_items').addClass('is_invisible')
     $pageHead.find('#search_button span').addClass('is_invisible')
   }
 
-  function headerAdjustBack() {
+  function headerAdjustBack () {
     $pageHead.find('.toggle-menu').removeClass('is-visible-inline')
     $pageHead.find('.menus_items').removeClass('is_invisible')
     $pageHead.find('#search_button span').removeClass('is_invisible')
   }
 
   // 初始化header
-  function initAjust() {
+  function initAjust () {
     if (window.innerWidth < 768) headerAdjust()
     else isAdjust(2)
   }
 
   initAjust()
-  $('#page-header').css({
-    opacity: '1',
-    animation: 'headerNoOpacity 1s'
-  })
+  $('#page-header').css({ opacity: '1', animation: 'headerNoOpacity 1s' })
 
   $(window).on('resize', function () {
     if ($('#sidebar').hasClass('tocOpenPc') && $pageHead.hasClass('fixed')) {
@@ -82,7 +79,7 @@ $(function () {
    * 點擊左下角箭頭,顯示sidebar
    */
 
-  function closeSidebar() {
+  function closeSidebar () {
     $('#sidebar').removeClass('tocOpenPc')
     $('.menus').animate({
       paddingRight: 0
@@ -103,7 +100,7 @@ $(function () {
     }, 400)
   }
 
-  function openSidebar() {
+  function openSidebar () {
     $('#sidebar').addClass('tocOpenPc')
     $('.menus').animate({
       paddingRight: 300
@@ -148,7 +145,7 @@ $(function () {
   var $mobileTocButton = $('#mobile-toc-button')
   var $menuMask = $('#menu_mask')
 
-  function openMobileSidebar(name) {
+  function openMobileSidebar (name) {
     sidebarPaddingR()
     $('body').css('overflow', 'hidden')
     $menuMask.fadeIn()
@@ -166,18 +163,12 @@ $(function () {
     if (name === 'toc') {
       $mobileTocButton.removeClass('close').addClass('open')
       $('#sidebar').addClass('tocOpenMobile')
-      $('#sidebar').css({
-        transform: 'translate3d(-100%,0,0)',
-        left: ''
-      })
+      $('#sidebar').css({ transform: 'translate3d(-100%,0,0)', left: '' })
     }
   }
 
-  function closeMobileSidebar(name) {
-    $('body').css({
-      overflow: '',
-      'padding-right': ''
-    })
+  function closeMobileSidebar (name) {
+    $('body').css({ overflow: '', 'padding-right': '' })
     $menuMask.fadeOut()
 
     if (name === 'menu') {
@@ -189,9 +180,7 @@ $(function () {
     if (name === 'toc') {
       $mobileTocButton.removeClass('open').addClass('close')
       $('#sidebar').removeClass('tocOpenMobile')
-      $('#sidebar').css({
-        transform: ''
-      })
+      $('#sidebar').css({ transform: '' })
     }
   }
 
@@ -248,9 +237,7 @@ $(function () {
       return true
     } else { // webkit - safari/chrome
       if (isSnackbar) {
-        var bookmarkText = GLOBAL_CONFIG.Snackbar.bookmark.message_prev +
-          ' ' + (navigator.userAgent.toLowerCase().indexOf('mac') !== -1 ? 'Command/Cmd' : 'CTRL') +
-          '+ D ' + GLOBAL_CONFIG.Snackbar.bookmark.message_next
+        var bookmarkText = GLOBAL_CONFIG.Snackbar.bookmark.message_prev + ' ' + (navigator.userAgent.toLowerCase().indexOf('mac') !== -1 ? 'Command/Cmd' : 'CTRL') + '+ D ' + GLOBAL_CONFIG.Snackbar.bookmark.message_next + '.'
         snackbarShow(bookmarkText)
       } else {
         alert(GLOBAL_CONFIG.bookmark.message_prev + ' ' + (navigator.userAgent.toLowerCase().indexOf('mac') !== -1 ? 'Command/Cmd' : 'CTRL') + '+ D ' + GLOBAL_CONFIG.bookmark.message_next + '.')
@@ -260,121 +247,143 @@ $(function () {
 
   /**
    * 代碼
+   * 只適用於Hexo默認的代碼渲染
    */
-  const isHighlightCopy = GLOBAL_CONFIG.highlightCopy
-  const isHighlightLang = GLOBAL_CONFIG.highlightLang
-  const isHighlightShrink = GLOBAL_CONFIG.highlightShrink
   const $figureHighlight = $('figure.highlight')
-  if (isHighlightCopy || isHighlightLang || isHighlightShrink !== 'none') {
-    $figureHighlight.wrap('<div class="code-area-wrap"></div>').before('<div class="highlight-tools"></div>')
-  }
 
-  /**
+  if ($figureHighlight.length) {
+    const isHighlightCopy = GLOBAL_CONFIG.highlightCopy
+    const isHighlightLang = GLOBAL_CONFIG.highlightLang
+    const isHighlightShrink = GLOBAL_CONFIG.highlightShrink
+
+    if (isHighlightCopy || isHighlightLang || isHighlightShrink !== 'none') {
+      $figureHighlight.wrap('<div class="code-area-wrap"></div>').before('<div class="highlight-tools"></div>')
+    }
+
+    /**
    * 代碼收縮
    */
-  const $highlightTools = $('.highlight-tools')
-  if (isHighlightShrink === 'true') {
-    $highlightTools.append('<i class="fa fa-angle-down code-expand code-closed" aria-hidden="true"></i>')
-  } else if (isHighlightShrink === 'false') {
-    $highlightTools.append('<i class="fa fa-angle-down code-expand" aria-hidden="true"></i>')
-  }
-
-  $(document).on('click', '.highlight-tools >.code-expand', function () {
-    var $table = $(this).parent().next()
-    if ($(this).hasClass('code-closed')) {
-      $table.css('display', 'block')
-      $(this).removeClass('code-closed')
-    } else {
-      $table.css('display', 'none')
-      $(this).addClass('code-closed')
+    const $highlightTools = $('.highlight-tools')
+    if (isHighlightShrink === 'true') {
+      $highlightTools.append('<i class="fa fa-angle-down code-expand code-closed" aria-hidden="true"></i>')
+    } else if (isHighlightShrink === 'false') {
+      $highlightTools.append('<i class="fa fa-angle-down code-expand" aria-hidden="true"></i>')
     }
-  })
 
-  /**
-   * 代碼語言
-   */
-  if (isHighlightLang) {
-    var langNameIndex, langName
-    $figureHighlight.each(function () {
-      langNameIndex = langName = $(this).attr('class').split(' ')[1]
-      if (langNameIndex === 'plain') langName = 'Code'
-      $(this).prev().append('<div class="code-lang">' + langName + '</div>')
+    $(document).on('click', '.highlight-tools >.code-expand', function () {
+      var $table = $(this).parent().next()
+      if ($(this).hasClass('code-closed')) {
+        $table.css('display', 'block')
+        $(this).removeClass('code-closed')
+      } else {
+        $table.css('display', 'none')
+        $(this).addClass('code-closed')
+      }
     })
-  }
-  /**
+
+    /**
+    * 代碼語言
+  */
+    if (isHighlightLang) {
+      var langNameIndex, langName
+      $figureHighlight.each(function () {
+        langNameIndex = langName = $(this).attr('class').split(' ')[1]
+        if (langNameIndex === 'plain') langName = 'Code'
+        $(this).prev().append('<div class="code-lang">' + langName + '</div>')
+      })
+    }
+    /**
    * 代碼copy
    * copy function
    */
-  if (isHighlightCopy) {
-    $highlightTools.append('<div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i>')
-    var copy = function (text, ctx) {
-      if (document.queryCommandSupported && document.queryCommandSupported('copy')) {
-        try {
-          document.execCommand('copy') // Security exception may be thrown by some browsers.
-          if (isSnackbar) {
-            snackbarShow(GLOBAL_CONFIG.copy.success)
-          } else {
-            $(ctx).prev('.copy-notice')
-              .text(GLOBAL_CONFIG.copy.success)
-              .animate({
-                opacity: 1,
-                right: 30
-              }, 450, function () {
-                setTimeout(function () {
-                  $(ctx).prev('.copy-notice').animate({
-                    opacity: 0,
-                    right: 0
-                  }, 650)
-                }, 400)
-              })
+    if (isHighlightCopy) {
+      $highlightTools.append('<div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i>')
+      var copy = function (text, ctx) {
+        if (document.queryCommandSupported && document.queryCommandSupported('copy')) {
+          try {
+            document.execCommand('copy') // Security exception may be thrown by some browsers.
+            if (isSnackbar) {
+              snackbarShow(GLOBAL_CONFIG.copy.success)
+            } else {
+              $(ctx).prev('.copy-notice')
+                .text(GLOBAL_CONFIG.copy.success)
+                .animate({
+                  opacity: 1,
+                  right: 30
+                }, 450, function () {
+                  setTimeout(function () {
+                    $(ctx).prev('.copy-notice').animate({
+                      opacity: 0,
+                      right: 0
+                    }, 650)
+                  }, 400)
+                })
+            }
+          } catch (ex) {
+            if (isSnackbar) {
+              snackbarShow(GLOBAL_CONFIG.copy.success)
+            } else {
+              $(ctx).prev('.copy-notice')
+                .text(GLOBAL_CONFIG.copy.error)
+                .animate({
+                  opacity: 1,
+                  right: 30
+                }, 650, function () {
+                  setTimeout(function () {
+                    $(ctx).prev('.copy-notice').animate({
+                      opacity: 0,
+                      right: 0
+                    }, 650)
+                  }, 400)
+                })
+              return false
+            }
           }
-        } catch (ex) {
-          if (isSnackbar) {
-            snackbarShow(GLOBAL_CONFIG.copy.success)
-          } else {
-            $(ctx).prev('.copy-notice')
-              .text(GLOBAL_CONFIG.copy.error)
-              .animate({
-                opacity: 1,
-                right: 30
-              }, 650, function () {
-                setTimeout(function () {
-                  $(ctx).prev('.copy-notice').animate({
-                    opacity: 0,
-                    right: 0
-                  }, 650)
-                }, 400)
-              })
-            return false
-          }
-        }
-      } else {
-        if (isSnackbar) {
-          snackbarShow(GLOBAL_CONFIG.copy.noSupport)
         } else {
-          $(ctx).prev('.copy-notice').text(GLOBAL_CONFIG.copy.noSupport)
+          if (isSnackbar) {
+            snackbarShow(GLOBAL_CONFIG.copy.noSupport)
+          } else {
+            $(ctx).prev('.copy-notice').text(GLOBAL_CONFIG.copy.noSupport)
+          }
         }
       }
-    }
 
-    // click events
-    $(document).on('click', '.highlight-tools>.fa-clipboard', function () {
-      var selection = window.getSelection()
-      var range = document.createRange()
-      range.selectNodeContents($(this).parent().next().find('.code pre')[0])
-      selection.removeAllRanges()
-      selection.addRange(range)
-      var text = selection.toString()
-      copy(text, this)
-      selection.removeAllRanges()
+      // click events
+      $(document).on('click', '.highlight-tools>.fa-clipboard', function () {
+        var selection = window.getSelection()
+        var range = document.createRange()
+        range.selectNodeContents($(this).parent().next().find('.code pre')[0])
+        selection.removeAllRanges()
+        selection.addRange(range)
+        var text = selection.toString()
+        copy(text, this)
+        selection.removeAllRanges()
+      })
+    }
+  }
+
+  /**
+ * PhotoFigcaption
+ */
+  function addPhotoFigcaption () {
+    var images = $('#article-container img')
+    images.each(function (i, o) {
+      var $this = $(o)
+      if ($this.attr('alt')) {
+        var t = $('<div class="img-alt is-center">' + $this.attr('alt') + '</div>')
+        $this.after(t)
+      }
     })
   }
+  if (GLOBAL_CONFIG.isPhotoFigcaption) addPhotoFigcaption()
 
   /**
    * justified-gallery 圖庫排版
    */
   var $justifiedGallery = $('.justified-gallery')
+  var isJustifiedGallery = false
   if ($justifiedGallery.length) {
+    isJustifiedGallery = true
     var $imgList = $justifiedGallery.find('img')
     $imgList.unwrap()
     if ($imgList.length) {
@@ -385,11 +394,19 @@ $(function () {
     }
     $('head').append('<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css">')
     loadScript('https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js', function () {
-      $justifiedGallery.not($('.hide-content .justified-gallery')).justifiedGallery({
-        rowHeight: 220,
-        margins: 4
-      })
+      initJustifiedGallery($justifiedGallery)
     })
+
+    var initJustifiedGallery = function (selector) {
+      selector.each(function (i, o) {
+        if ($(this).is(':visible')) {
+          $(this).justifiedGallery({
+            rowHeight: 220,
+            margins: 4
+          })
+        }
+      })
+    }
   }
 
   /**
@@ -443,24 +460,18 @@ $(function () {
       }
       $pageHead.addClass('fixed')
       if ($rightside.css('opacity') === '0') {
-        $rightside.css({
-          opacity: '1',
-          transform: 'translateX(-38px)'
-        })
+        $rightside.css({ opacity: '1', transform: 'translateX(-38px)' })
       }
     } else {
       if (currentTop === 0) {
         $pageHead.removeClass('fixed').removeClass('visible')
       }
-      $rightside.css({
-        opacity: '',
-        transform: ''
-      })
+      $rightside.css({ opacity: '', transform: '' })
     }
   })
 
   // find the scroll direction
-  function scrollDirection(currentTop) {
+  function scrollDirection (currentTop) {
     var result = currentTop > initTop // true is down & false is up
     initTop = currentTop
     return result
@@ -512,9 +523,9 @@ $(function () {
       var contentMath = (docHeight > winHeight) ? (docHeight - winHeight) : ($(document).height() - winHeight)
       var scrollPercent = (currentTop) / (contentMath)
       var scrollPercentRounded = Math.round(scrollPercent * 100)
-      var percentage = (scrollPercentRounded > 100) ? 100 :
-        (scrollPercentRounded <= 0) ? 0 :
-        scrollPercentRounded
+      var percentage = (scrollPercentRounded > 100) ? 100
+        : (scrollPercentRounded <= 0) ? 0
+          : scrollPercentRounded
       $('.progress-num').text(percentage)
       $('.sidebar-toc__progress-bar').animate({
         width: percentage + '%'
@@ -522,8 +533,8 @@ $(function () {
     }
 
     var updateAnchor = function (anchor) {
-      if (window.history.replaceState && anchor !== window.location.hash) {
-        window.history.replaceState(undefined, undefined, anchor)
+      if (anchor !== window.location.hash) {
+        location.replace(window.location.href.split('#')[0] + anchor)
       }
     }
 
@@ -532,8 +543,8 @@ $(function () {
     // ol.toc > (li.toc-item, ...)
     // li.toc-item > (a.toc-link, ol.toc-child > (li.toc-item, ...))
     var findHeadPosition = function (top) {
-      // assume that we are not in the post page if no TOC link be found,
-      // thus no need to update the status
+    // assume that we are not in the post page if no TOC link be found,
+    // thus no need to update the status
       if ($('.toc-link').length === 0) {
         return false
       }
@@ -647,8 +658,7 @@ $(function () {
   if (copyright !== undefined) {
     document.body.oncopy = function (event) {
       event.preventDefault()
-      let textFont;
-      const copyFont = window.getSelection(0).toString()
+      let textFont; const copyFont = window.getSelection(0).toString()
       if (copyFont.length > 45) {
         textFont = copyFont + '\n' + '\n' + '\n' +
           copyright.languages.author + '\n' +
@@ -676,29 +686,25 @@ $(function () {
     document.documentElement.getAttribute('data-theme') === 'dark' ? changeLightIcon() : changeDarkIcon()
   }
 
-  function changeLightIcon() {
+  function changeLightIcon () {
     isFontAwesomeV5 ? $darkModeButtom.removeClass('fa-moon').addClass('fa-sun') : $darkModeButtom.removeClass('fa-moon-o').addClass('fa-sun-o')
   }
 
-  function changeDarkIcon() {
+  function changeDarkIcon () {
     isFontAwesomeV5 ? $darkModeButtom.removeClass('fa-sun').addClass('fa-moon') : $darkModeButtom.removeClass('fa-sun-o').addClass('fa-moon-o')
   }
 
-  function switchReadMode() {
+  function switchReadMode () {
     var nowMode = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'
     if (nowMode === 'light') {
       changeLightIcon()
       activateDarkMode()
-      Cookies.set('theme', 'dark', {
-        expires: 2
-      })
+      Cookies.set('theme', 'dark', { expires: 2 })
       if (isSnackbar) snackbarShow(GLOBAL_CONFIG.Snackbar.day_to_night)
     } else {
       changeDarkIcon()
       activateLightMode()
-      Cookies.set('theme', 'light', {
-        expires: 2
-      })
+      Cookies.set('theme', 'light', { expires: 2 })
       if (isSnackbar) snackbarShow(GLOBAL_CONFIG.Snackbar.night_to_day)
     }
   }
@@ -732,6 +738,9 @@ $(function () {
     interval = setInterval(showDateTime, 10000)
   }
 
+  /**
+   * 百度推送
+   */
   if (GLOBAL_CONFIG.baiduPush) {
     (function () {
       var bp = document.createElement('script')
@@ -750,26 +759,18 @@ $(function () {
    * tag-hide
    */
   var $hideInline = $('.hide-button')
-  $hideInline.on('click', function (e) {
-    e.preventDefault()
-    $(this).hide()
-    var $hideContent = $(this).next('.hide-content')
-    $hideContent.show()
-    $hideContent.find('.justified-gallery').justifiedGallery({
-      rowHeight: 220,
-      margins: 4
-    })
-  })
-
-  function addPhotoFigcaption() {
-    var images = $('#article-container img')
-    images.each(function (i, o) {
-      var $this = $(o)
-      if ($this.attr('alt')) {
-        var t = $('<div class="img-alt is-center">' + $this.attr('alt') + '</div>')
-        $this.after(t)
+  if ($hideInline.length) {
+    $hideInline.on('click', function (e) {
+      e.preventDefault()
+      var $this = $(this)
+      var $hideContent = $(this).next('.hide-content')
+      $this.toggleClass('open')
+      $hideContent.toggle()
+      if ($this.hasClass('open')) {
+        if (isJustifiedGallery && $hideContent.find('.justified-gallery').length > 0) {
+          initJustifiedGallery($hideContent.find('.justified-gallery'))
+        }
       }
     })
   }
-  if (GLOBAL_CONFIG.isPhotoFigcaption) addPhotoFigcaption()
 })
