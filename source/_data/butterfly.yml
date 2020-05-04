@@ -113,21 +113,21 @@ avatar:
   effect: false # 頭像會一直轉圈
 
 # the banner image of index
-index_img: https://cdn.jsdelivr.net/gh/Nafoaix/myblog@master/source/images/banner-neon.jpg
+index_img: https://cdn.jsdelivr.net/gh/Nafoaix/myblog@master/source/images/banner-neon2.jpg
 
 # if the banner of page not setting,it will show the top_img
-default_top_img: https://cdn.jsdelivr.net/gh/Nafoaix/myblog@master/source/images/banner-neon.jpg
+default_top_img: https://cdn.jsdelivr.net/gh/Nafoaix/myblog@master/source/images/banner-neon2.jpg
 
 # the banner image of archive page
-archive_img: https://cdn.jsdelivr.net/gh/Nafoaix/myblog@master/source/images/banner-neon.jpg
+archive_img: https://cdn.jsdelivr.net/gh/Nafoaix/myblog@master/source/images/banner-neon2.jpg
 
 # the banner image of tag page
 # tag page, look like https://xxxxxxxxx.com/tags/butterfly
-tag_img: https://cdn.jsdelivr.net/gh/Nafoaix/myblog@master/source/images/banner-neon.jpg
+tag_img: https://cdn.jsdelivr.net/gh/Nafoaix/myblog@master/source/images/banner-neon2.jpg
 
 # the banner image of category page
 # category page, look like https://xxxxxxxxx.com/categories/butterfly
-category_img: https://cdn.jsdelivr.net/gh/Nafoaix/myblog@master/source/images/banner-neon.jpg
+category_img: https://cdn.jsdelivr.net/gh/Nafoaix/myblog@master/source/images/banner-neon2.jpg
 
 # 如果你有使用hexo-douban，可配置這個
 # douban:
@@ -312,7 +312,7 @@ ICP:
   enable: true
   url: http://www.beian.miit.gov.cn
   text: 粤ICP备20032606号
-  icon: /img/icp.png
+  icon: https://cdn.jsdelivr.net/gh/Nafoaix/pic-repo@master/imgs/icp.png
 
 ####   Analysis    ####
 # ---------------
