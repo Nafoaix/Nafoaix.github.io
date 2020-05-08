@@ -1,6 +1,6 @@
 # hexo-theme-butterfly
 
-<a href="https://github.com/jerryc127/hexo-theme-butterfly/releases"><img alt="Version" src="https://img.shields.io/badge/release-2.3.0-blue"/></a>
+<a href="https://github.com/jerryc127/hexo-theme-butterfly/releases"><img alt="Version" src="https://img.shields.io/badge/release-2.3.5-blue"/></a>
 <a href="https://jerryc.me"><img alt="Author" src="https://img.shields.io/badge/author-JerryC-blur"/></a>
 <a href="https://hexo.io"><img alt="Hexo" src="https://img.shields.io/badge/hexo-4.0+-0e83c"/></a>
 <a href="https://nodejs.org/"><img alt="node.js" src="https://img.shields.io/badge/node.js-8.0+-blur"/></a>
@@ -36,7 +36,14 @@ theme: Butterfly
 
 可查看[hexo-theme-butterfly docs](https://docs.jerryc.me) 和 [JerryC](https://jerryc.me/posts/21cfbf15)
 
+你也可以加入群組
+
+[  💬 QQ群 [推薦]](https://jq.qq.com/?_wv=1027&k=5KI3Jqb)
+
+[  💬Telegram群](https://t.me/hexo_butterfly)
+
 ## 截圖
+
 ![image](https://user-images.githubusercontent.com/16351105/58887365-1272f780-8718-11e9-9329-3292c6ba20d4.png)
 ![image](https://user-images.githubusercontent.com/16351105/58887457-3cc4b500-8718-11e9-9417-2bdea603c92e.png)
 
