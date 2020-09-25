@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://nafx.top/myblog/2020/07/22/DHT11&LCD1602/</loc>
+    <lastmod>2020-09-25</lastmod>
+  </url>  <url>
     <loc>https://nafx.top/myblog/2020/05/02/HTTP-protocol/</loc>
-    <lastmod>2020-05-08</lastmod>
+    <lastmod>2020-09-25</lastmod>
   </url>  <url>
     <loc>https://nafx.top/myblog/2020/04/17/Learngit_Note1/</loc>
-    <lastmod>2020-05-08</lastmod>
+    <lastmod>2020-09-25</lastmod>
   </url>  <url>
     <loc>https://nafx.top/myblog/2020/04/19/Well-known_game_manufacturers1/</loc>
-    <lastmod>2020-05-08</lastmod>
+    <lastmod>2020-09-25</lastmod>
   </url>  <url>
     <loc>https://nafx.top/myblog/2020/04/28/pylearn1/</loc>
-    <lastmod>2020-05-08</lastmod>
+    <lastmod>2020-09-25</lastmod>
   </url>
 </urlset>
