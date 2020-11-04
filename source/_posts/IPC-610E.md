@@ -14,10 +14,6 @@ date: 2020-11-02 10:55:16
 
 # IPC-610E（电子组件的可接受性）
 
-{% note info %}
-本篇文章写于 2020 年 4 月，在赛博朋克 2077 漫长而又煎熬的等待之余我我决定以我**个人视角**盘点下那些带给我无数爱恨、惊喜与感动的游戏厂商们。文章资料同通过互联网搜集整理，如有错误还请指正，本文内容仅代表个人观点。
-{% endnote %}
-
 ## IPC简介
 
 <!-- ![CD Projekt RED](https://cdn.jsdelivr.net/gh/Nafoaix/pic-repo@master/well-known_game/CDPR.jpg)
