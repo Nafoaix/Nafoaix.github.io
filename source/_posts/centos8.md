@@ -3,9 +3,8 @@
 > 相关资源：
 > kiftd ： https://github.com/KOHGYLW/kiftd 
 
-Linux压缩包：https://cloud.189.cn/t/ruIr2eyeyUVb (访问码:v5pj)
-
 ## 1.安装JAVA运行环境
+
 ```
 yum install java-11-openjdk-devel
 ```
@@ -20,7 +19,50 @@ CentOS 8还支持无头版本的OpenJDK，该版本提供了无需图形用户�
 ```
 sudo yum install java-11-openjdk-headless
 ```
+## 2.下载kiftd包并解压
 
+Linux压缩包：https://cloud.189.cn/t/ruIr2eyeyUVb (访问码:v5pj)
+下载压缩包并上传到服务器，在具备rwx权限且不含中文的文件夹中解压，即可以用命令直接启动kiftd服务。
+```
+java -jar kiftd-x.x.x-xxx.jar -console 
+```
+## 3.后台运行kiftd
+### Screen 工具
+Screen 工具能够虚拟出一个终端并执行相应的操作。使用前，您需要先安装
+该工具，例如在 Ubnutu 系统中，您可以使用以下命令进行安装： 
+```
+apt-get install screen 
+```
+该工具安装完成后，您便可以使用它来运行 kiftd:  
+
+#### 1.创建一个虚拟终端： 
+```
+screen -S {自定义的虚拟终端名称} 
+```
+例如： 
+```
+screen -S kiftd 
+```
+
+#### 2.在虚拟终端中以命令模式启动 kiftd： 
+```
+java -jar kiftd-x.x.x-xxx.jar -console 
+```
+之后您便可以断开 SSH 连接或者使用 Ctrl+A Ctrl+D 键暂时退出虚拟终端以进行其他操作。  
+#### 3，当您需要继续操作 kiftd 时： 
+请使用 SSH 重新链接至远程服务器，之后使用虚拟终端名重新回到 screen虚拟终端： 
+```
+screen -r {自定义的虚拟终端名称} 
+```
+例如： 
+```
+screen -r kiftd 
+```
+这样您便能返回之前的虚拟终端并继续操作 kiftd。
+
+## 4.开放端口
+### 服务器防火墙开放端口
+```
 查看防火墙某个端口是否开放
 firewall-cmd --query-port=3306/tcp
 开放防火墙端口3306
@@ -44,3 +86,6 @@ firewall-cmd --zone=public --list-ports
 netstat -lntp
 检查端口被哪个进程占用
 netstat -lnp|grep 3306
+```
+### 阿里云开放端口
+实例=>安全组=>手动添加
