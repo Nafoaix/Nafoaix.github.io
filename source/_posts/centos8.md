@@ -16,6 +16,10 @@ openjdk version "11.0.9.1" 2020-11-04 LTS
 OpenJDK Runtime Environment 18.9 (build 11.0.9.1+1-LTS)
 OpenJDK 64-Bit Server VM 18.9 (build 11.0.9.1+1-LTS, mixed mode, sharing)
 ```
+CentOS 8还支持无头版本的OpenJDK，该版本提供了无需图形用户界面（不支持键盘，鼠标和显示系统）来执行应用程序所需的最少Java运行时，该版本具有更少的依赖性和更少的系统资源，因此它更适合于服务器应用程序。
+```
+sudo yum install java-11-openjdk-headless
+```
 
 查看防火墙某个端口是否开放
 firewall-cmd --query-port=3306/tcp
