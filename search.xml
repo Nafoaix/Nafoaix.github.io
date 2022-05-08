@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>使用WSL+VScode搭建C/C++开发环境</title>
+      <link href="/2022/01/08/wsl+vscode/"/>
+      <url>/2022/01/08/wsl+vscode/</url>
+      
+        <content type="html"><![CDATA[<h1 id="使用WSL-VScode搭建C-C-开发环境"><a href="#使用WSL-VScode搭建C-C-开发环境" class="headerlink" title="使用WSL+VScode搭建C/C++开发环境"></a>使用WSL+VScode搭建C/C++开发环境</h1><div class="note info flat"><p>参考文档：<a href="https://docs.microsoft.com/zh-cn/windows/wsl/setup/environment">https://docs.microsoft.com/zh-cn/windows/wsl/setup/environment</a></p></div><h2 id="安装WSL"><a href="#安装WSL" class="headerlink" title="安装WSL"></a>安装WSL</h2><h3 id="新版本"><a href="#新版本" class="headerlink" title="新版本"></a>新版本</h3><p>对于最新版本的 Windows （内部版本 20262+）可以使用简化的 –install 命令安装WSL。若要检查 Windows 版本及内部版本号，选择 Windows 徽标键 + R，然后键入“winver”，选择“确定”。</p><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">wsl -<span class="literal">-install</span></span><br></pre></td></tr></table></figure><p>–install 命令执行以下操作：</p><ul><li>启用可选的 WSL 和虚拟机平台组件</li><li>下载并安装最新 Linux 内核</li><li>将 WSL 2 设置为默认值</li><li>下载并安装 Ubuntu Linux 发行版（可能需要重新启动）</li></ul><p>在此安装过程中，你将需要重启计算机。</p><h3 id="其他版本"><a href="#其他版本" class="headerlink" title="其他版本"></a>其他版本</h3><p>若要更新到 WSL 2，需要运行 Windows 10。<br>对于 x64 系统：版本 1903 或更高版本，采用内部版本 18362 或更高版本。<br>对于 ARM64 系统：版本 2004 或更高版本，采用内部版本 19041 或更高版本。<br>低于 18362 的版本不支持 WSL 2。 使用 Windows Update 助手更新 Windows 版本。</p><p>如不是最新版本可以以管理员身份运行powershell，按以下步骤安装：</p><h4 id="1-启用-Windows-Subsystem-Linux子系统"><a href="#1-启用-Windows-Subsystem-Linux子系统" class="headerlink" title="1.启用 Windows-Subsystem-Linux子系统"></a>1.启用 Windows-Subsystem-Linux子系统</h4><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">dism.exe /online /<span class="built_in">enable-feature</span> /featurename:Microsoft<span class="literal">-Windows</span><span class="literal">-Subsystem</span><span class="literal">-Linux</span> /all /norestart   </span><br></pre></td></tr></table></figure><h4 id="2-开启虚拟机功能"><a href="#2-开启虚拟机功能" class="headerlink" title="2.开启虚拟机功能"></a>2.开启虚拟机功能</h4><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">dism.exe /online /<span class="built_in">enable-feature</span> /featurename:VirtualMachinePlatform /all /norestart </span><br></pre></td></tr></table></figure><h4 id="3-重启后下载安装Linux内核更新包"><a href="#3-重启后下载安装Linux内核更新包" class="headerlink" title="3.重启后下载安装Linux内核更新包"></a>3.重启后下载安装Linux内核更新包</h4><p>下载地址： <a href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi">适用于 x64 计算机的 WSL2 Linux 内核更新包</a></p><h4 id="4-将wsl2设为默认版本"><a href="#4-将wsl2设为默认版本" class="headerlink" title="4.将wsl2设为默认版本"></a>4.将wsl2设为默认版本</h4><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">wsl -<span class="literal">-set</span><span class="literal">-default</span><span class="literal">-version</span> <span class="number">2</span></span><br></pre></td></tr></table></figure><h4 id="5-自己选择安装Linux发行版"><a href="#5-自己选择安装Linux发行版" class="headerlink" title="5.自己选择安装Linux发行版"></a>5.自己选择安装Linux发行版</h4><p>打开 <a href="https://www.microsoft.com/store/apps/9n6svws3rx71">Microsoft Store</a>，并选择你偏好的 Linux 分发版。</p><h2 id="配置开发环境"><a href="#配置开发环境" class="headerlink" title="配置开发环境"></a>配置开发环境</h2><p>安装完成后打开WSL的shell</p><h3 id="1-更新ubuntu软件"><a href="#1-更新ubuntu软件" class="headerlink" title="1.更新ubuntu软件"></a>1.更新ubuntu软件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt update</span><br></pre></td></tr></table></figure><h3 id="2-安装编译器调试器"><a href="#2-安装编译器调试器" class="headerlink" title="2.安装编译器调试器"></a>2.安装编译器调试器</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt -y install gcc g++ gdb</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jsdelivr.net/gh/Nafoaix/pic-repo/imgs/202205082315643.png"></p><h3 id="3-在VScode中安装wsl插件"><a href="#3-在VScode中安装wsl插件" class="headerlink" title="3.在VScode中安装wsl插件"></a>3.在VScode中安装wsl插件</h3><p>在子系统shell中输入<code>code .</code>就可以打开VScode，第一次从子系统打开VS Code会自动安装一些插件，等待安装完成后就可以在WSL中进行开发了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开发环境 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> WSL </tag>
+            
+            <tag> VScode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>阿里云服务器部署个人网盘服务</title>
       <link href="/2021/04/13/centos8/"/>
       <url>/2021/04/13/centos8/</url>
