@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://nafx.top/archives/c8bc38b7.html</loc>
+    
+    <lastmod>2022-07-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://nafx.top/archives/3003c9dd.html</loc>
     
     <lastmod>2022-07-09</lastmod>
@@ -57,15 +66,6 @@
   
   <url>
     <loc>https://nafx.top/archives/c0d06efd.html</loc>
-    
-    <lastmod>2022-07-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://nafx.top/archives/3003c9dd.html</loc>
     
     <lastmod>2022-07-09</lastmod>
     
@@ -202,20 +202,6 @@
   </url>
   
   <url>
-    <loc>https://nafx.top/tags/%E6%B8%B8%E6%88%8F/</loc>
-    <lastmod>2022-07-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://nafx.top/tags/%E6%9D%82%E8%B0%88/</loc>
-    <lastmod>2022-07-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://nafx.top/tags/STM32/</loc>
     <lastmod>2022-07-09</lastmod>
     <changefreq>weekly</changefreq>
@@ -231,6 +217,20 @@
   
   <url>
     <loc>https://nafx.top/tags/%E8%9C%82%E9%B8%A3%E5%99%A8/</loc>
+    <lastmod>2022-07-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://nafx.top/tags/%E6%B8%B8%E6%88%8F/</loc>
+    <lastmod>2022-07-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://nafx.top/tags/%E6%9D%82%E8%B0%88/</loc>
     <lastmod>2022-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -302,6 +302,20 @@
   </url>
   
   <url>
+    <loc>https://nafx.top/categories/%E5%8D%95%E7%89%87%E6%9C%BA/STM32/</loc>
+    <lastmod>2022-07-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://nafx.top/categories/%E6%B8%B8%E6%88%8F/</loc>
+    <lastmod>2022-07-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://nafx.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTTP/</loc>
     <lastmod>2022-07-09</lastmod>
     <changefreq>weekly</changefreq>
@@ -317,20 +331,6 @@
   
   <url>
     <loc>https://nafx.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Git/</loc>
-    <lastmod>2022-07-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://nafx.top/categories/%E6%B8%B8%E6%88%8F/</loc>
-    <lastmod>2022-07-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://nafx.top/categories/%E5%8D%95%E7%89%87%E6%9C%BA/STM32/</loc>
     <lastmod>2022-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
