@@ -179,13 +179,6 @@
   </url>
   
   <url>
-    <loc>https://nafx.top/tags/Git/</loc>
-    <lastmod>2022-07-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://nafx.top/tags/IPC-610E/</loc>
     <lastmod>2022-07-09</lastmod>
     <changefreq>weekly</changefreq>
@@ -193,14 +186,7 @@
   </url>
   
   <url>
-    <loc>https://nafx.top/tags/%E6%B8%B8%E6%88%8F/</loc>
-    <lastmod>2022-07-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://nafx.top/tags/%E6%9D%82%E8%B0%88/</loc>
+    <loc>https://nafx.top/tags/Git/</loc>
     <lastmod>2022-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -215,6 +201,20 @@
   
   <url>
     <loc>https://nafx.top/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+    <lastmod>2022-07-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://nafx.top/tags/%E6%B8%B8%E6%88%8F/</loc>
+    <lastmod>2022-07-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://nafx.top/tags/%E6%9D%82%E8%B0%88/</loc>
     <lastmod>2022-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -272,7 +272,7 @@
   </url>
   
   <url>
-    <loc>https://nafx.top/categories/%E6%B8%B8%E6%88%8F/</loc>
+    <loc>https://nafx.top/categories/LINUX/</loc>
     <lastmod>2022-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -286,13 +286,6 @@
   </url>
   
   <url>
-    <loc>https://nafx.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Git/</loc>
-    <lastmod>2022-07-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://nafx.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/IPC-610E/</loc>
     <lastmod>2022-07-09</lastmod>
     <changefreq>weekly</changefreq>
@@ -300,7 +293,21 @@
   </url>
   
   <url>
-    <loc>https://nafx.top/categories/LINUX/</loc>
+    <loc>https://nafx.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Git/</loc>
+    <lastmod>2022-07-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://nafx.top/categories/LINUX/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+    <lastmod>2022-07-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://nafx.top/categories/%E6%B8%B8%E6%88%8F/</loc>
     <lastmod>2022-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -315,13 +322,6 @@
   
   <url>
     <loc>https://nafx.top/categories/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</loc>
-    <lastmod>2022-07-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://nafx.top/categories/LINUX/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
     <lastmod>2022-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
