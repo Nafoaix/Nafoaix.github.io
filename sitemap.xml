@@ -20,15 +20,6 @@
   </url>
   
   <url>
-    <loc>https://nafx.top/archives/c87ac216.html</loc>
-    
-    <lastmod>2024-03-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://nafx.top/archives/73783806.html</loc>
     
     <lastmod>2023-04-27</lastmod>
@@ -348,6 +339,20 @@
   </url>
   
   <url>
+    <loc>https://nafx.top/tags/IPC-610E/</loc>
+    <lastmod>2024-03-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://nafx.top/tags/Git/</loc>
+    <lastmod>2024-03-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://nafx.top/tags/LINUX/</loc>
     <lastmod>2024-03-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -362,14 +367,14 @@
   </url>
   
   <url>
-    <loc>https://nafx.top/tags/IPC-610E/</loc>
+    <loc>https://nafx.top/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2024-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://nafx.top/tags/Git/</loc>
+    <loc>https://nafx.top/tags/%E7%BA%BF%E6%80%A7%E8%A1%A8/</loc>
     <lastmod>2024-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -391,20 +396,6 @@
   
   <url>
     <loc>https://nafx.top/tags/%E8%9C%82%E9%B8%A3%E5%99%A8/</loc>
-    <lastmod>2024-03-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://nafx.top/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
-    <lastmod>2024-03-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://nafx.top/tags/%E7%BA%BF%E6%80%A7%E8%A1%A8/</loc>
     <lastmod>2024-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -539,13 +530,6 @@
   </url>
   
   <url>
-    <loc>https://nafx.top/categories/LINUX/</loc>
-    <lastmod>2024-03-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://nafx.top/categories/%E5%8D%95%E7%89%87%E6%9C%BA/51/</loc>
     <lastmod>2024-03-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -553,14 +537,7 @@
   </url>
   
   <url>
-    <loc>https://nafx.top/categories/%E5%8D%95%E7%89%87%E6%9C%BA/STM32/</loc>
-    <lastmod>2024-03-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://nafx.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</loc>
+    <loc>https://nafx.top/categories/LINUX/</loc>
     <lastmod>2024-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -574,6 +551,20 @@
   </url>
   
   <url>
+    <loc>https://nafx.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</loc>
+    <lastmod>2024-03-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://nafx.top/categories/%E5%8D%95%E7%89%87%E6%9C%BA/STM32/</loc>
+    <lastmod>2024-03-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://nafx.top/categories/%E6%B8%B8%E6%88%8F/</loc>
     <lastmod>2024-03-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -581,7 +572,7 @@
   </url>
   
   <url>
-    <loc>https://nafx.top/categories/LINUX/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+    <loc>https://nafx.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/IPC-610E/</loc>
     <lastmod>2024-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -595,7 +586,7 @@
   </url>
   
   <url>
-    <loc>https://nafx.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/IPC-610E/</loc>
+    <loc>https://nafx.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Git/</loc>
     <lastmod>2024-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -623,7 +614,7 @@
   </url>
   
   <url>
-    <loc>https://nafx.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Git/</loc>
+    <loc>https://nafx.top/categories/LINUX/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
     <lastmod>2024-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
