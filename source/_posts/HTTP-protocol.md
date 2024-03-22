@@ -1,13 +1,15 @@
 ---
 title: 在浏览器中输入 URL 回车之后发生了什么
 tags:
-    - 学习笔记
-    - HTTP
+  - 学习笔记
+  - HTTP
+  - 计算机网络
 categories:
-    - 学习笔记
-    - HTTP
+  - 学习笔记
+  - 计算机网络
 toc: true
-cover: "https://cdn.jsdelivr.net/gh/Nafoaix/pic-repo@master/cover/liulanqi.jpg"
+cover: 'https://s2.loli.net/2022/08/15/gJCsdNIavBuljt2.jpg'
+abbrlink: c0d06efd
 date: 2020-05-02 09:17:16
 ---
 
@@ -34,12 +36,13 @@ date: 2020-05-02 09:17:16
 - 其他操作
     浏览器还会进行一些额外的操作，比如安全检查、访问限制（之前国产浏览器限制 996.icu）。
 - 检查缓存
-    ![What_happens_when_you_type_an_URL_in_the_browser_and_press_enter](https://cdn.jsdelivr.net/gh/Nafoaix/pic-repo@master/imgs/What_happens_when_you_type_an_URL_in_the_browser_and_press_enter.png)
+    ![What_happens_when_you_type_an_URL_in_the_browser_and_press_enter](https://s2.loli.net/2022/08/15/KE3gktbnMwNuILy.png)
 
 ### 二、DNS 查询
 
 **基本步骤**
-![DNS查询](https://cdn.jsdelivr.net/gh/Nafoaix/pic-repo@master/imgs/DNSchaxun.png)
+
+![DNS查询](https://s2.loli.net/2022/07/10/iMvbQPoEr3ytf7e.png)
 
 1. 浏览器缓存
    浏览器会先检查是否在缓存中，没有则调用系统库函数进行查询。
@@ -55,7 +58,8 @@ date: 2020-05-02 09:17:16
 
 5. 根域名服务器查询
    在前面所有步骤没有缓存的情况下，本地 DNS 服务器会将请求转发到互联网上的根域，下面这个图很好的诠释了整个流程：
-   ![DNS服务器查询](https://cdn.jsdelivr.net/gh/Nafoaix/pic-repo@master/imgs/DNSfuwuqichaxun.png)
+
+   ![DNS服务器查询](https://s2.loli.net/2022/07/10/VxvCpokuf8QqJsM.png)
 
     > 根域名服务器：[维基百科](https://zh.wikipedia.org/wiki/%E6%A0%B9%E7%B6%B2%E5%9F%9F%E5%90%8D%E7%A8%B1%E4%BC%BA%E6%9C%8D%E5%99%A8)
 
@@ -69,7 +73,8 @@ date: 2020-05-02 09:17:16
 ### 三、TCP 连接
 
 TCP/IP 分为四层，在发送数据时，每层都要对数据进行封装：
-![TCPIP](https://cdn.jsdelivr.net/gh/Nafoaix/pic-repo@master/imgs/TCPIP.png)
+
+![TCPIP](https://s2.loli.net/2022/07/10/A9oSeLUd2yhXZzf.png)
 
 1. 应用层：发送 HTTP 请求
    在前面的步骤我们已经得到服务器的 IP 地址，浏览器会开始构造一个 HTTP 报文，其中包括：
@@ -119,7 +124,7 @@ TCP/IP 分为四层，在发送数据时，每层都要对数据进行封装：
 ### 四、服务器处理请求
 
 **大致流程**
-![大致流程](https://cdn.jsdelivr.net/gh/Nafoaix/pic-repo@master/imgs/fuwuqichuliqingqiu.png)
+![大致流程](https://s2.loli.net/2022/07/10/O7j852nt3zrFHay.png)
 
 #### HTTPD
 
@@ -163,13 +168,13 @@ TCP/IP 分为四层，在发送数据时，每层都要对数据进行封装：
 
 #### 浏览器内核
 
-![浏览器内核](https://cdn.jsdelivr.net/gh/Nafoaix/pic-repo@master/imgs/lilanqineihe.png)
+![浏览器内核](https://s2.loli.net/2022/07/10/gU6cvTSnpYhWMIo.png)
 
 不同的浏览器内核，渲染过程也不完全相同，但大致流程都差不多。
 
 #### 基本流程
 
-![基本流程](https://cdn.jsdelivr.net/gh/Nafoaix/pic-repo@master/imgs/xuanranyemian.png)
+![基本流程](https://s2.loli.net/2022/08/15/ALvfIks9PJtleRG.png)
 
 #### 1.HTML 解析
 
@@ -206,7 +211,7 @@ TCP/IP 分为四层，在发送数据时，每层都要对数据进行封装：
 </html>
 ```
 
-![HTML](https://cdn.jsdelivr.net/gh/Nafoaix/pic-repo@master/imgs/DOM.png)
+![HTMLDOM](https://s2.loli.net/2022/07/10/sprnHj5wQLEGC62.png)
 
 **浏览器容错进制**
 你从来没有在浏览器看过类似”语法无效”的错误，这是因为浏览器去纠正错误的语法，然后继续工作。
@@ -284,7 +289,7 @@ reflow 基本是无法避免的，因为当你滑动一下鼠标、resize 窗口
 
 **大致流程**
 可以分为三个阶段：
-![JavaScript 编译执行流程](https://cdn.jsdelivr.net/gh/Nafoaix/pic-repo@master/imgs/JSbianyizhixing.png)
+![JavaScript 编译执行流程](https://s2.loli.net/2022/07/10/QwOgRlVY6BCoTpP.png)
 
 ##### 1. 词法分析
 
@@ -318,7 +323,7 @@ JS 有三种运行环境：
 ##### 3. 执行
 
 **JS 线程**
-![JS 线程](https://cdn.jsdelivr.net/gh/Nafoaix/pic-repo@master/imgs/JSxiancheng.png)
+![JS 线程](https://s2.loli.net/2022/07/10/1bqEzQAecsky9gl.png)
 虽然 JS 是单线程的，但实际上参与工作的线程一共有四个：
 
 > 其中三个只是协助，只有 JS 引擎线程是真正执行的
@@ -341,7 +346,7 @@ JS 有三种运行环境：
 
 微任务的执行在宏任务的同步任务之后，在异步任务之前。
 
-![微任务](https://cdn.jsdelivr.net/gh/Nafoaix/pic-repo@master/imgs/weirenwu.png)
+![微任务](https://s2.loli.net/2022/07/10/7xCXGJQ6UW4mZYM.png)
 
 代码例子
 

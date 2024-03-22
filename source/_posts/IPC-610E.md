@@ -2,23 +2,20 @@
 title: IPC-610E(电子组件的可接受性)
 tags:
   - IPC-610E
-  - 
+  - null
 categories:
   - 学习笔记
   - IPC-610E
 toc: true
-top_img: "https://cdn.jsdelivr.net/gh/Nafoaix/pic-repo@master/cover/IPC-A-610E.jpg"
-cover: "https://cdn.jsdelivr.net/gh/Nafoaix/pic-repo@master/cover/IPC-A-610E.jpg"
+top_img: 'https://s2.loli.net/2022/08/15/VpSNO6RxYKmsMkL.jpg'
+cover: 'https://s2.loli.net/2022/08/15/VpSNO6RxYKmsMkL.jpg'
+abbrlink: b3c014a2
 date: 2020-11-02 10:55:16
 ---
 
 # IPC-610E（电子组件的可接受性）
 
 ## IPC简介
-
-<!-- ![CD Projekt RED](https://cdn.jsdelivr.net/gh/Nafoaix/pic-repo@master/well-known_game/CDPR.jpg)
-
-> [`av16789674`](https://www.bilibili.com/video/av16789674/)《巫师 3》以及 CD Projekt 成功发展史-全 6 集游戏纪录片 -->
 
 &emsp;&emsp;IPC最初为“The Institute of Printed Circuit”的缩写，即美国“印制电路板协会”，后改名为“The Institute of the Interconnecting and Packing Electronic Circuit”(电子电路互连与封装协会)，1999年再次更名为“Associatation Of Connecting Electronics Industries”(电子制造业协会”)。由于IPC知名度很高，所以更名后，IPC的标记和缩写仍然没有改变。IPC拥有两千六百多个协会成员，包括世界著名的从事印制电路板设计、制造、组装、OEM（Original equipment manufacturer 即原始设备制造商）加工、EMS（electronics manufacture service 即电子制造服务）外包的大公司，IPC与IEC、ISO、IEEE、JEDC一样，是美国乃至全球电子制造业最有影响力的组织之一。 
 

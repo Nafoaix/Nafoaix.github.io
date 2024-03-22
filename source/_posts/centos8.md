@@ -1,13 +1,14 @@
 ---
 title: 阿里云服务器部署个人网盘服务
 tags:
-    - LINUX
-    - 服务器
+  - LINUX
+  - 服务器
 categories:
-    - LINUX
-    - 服务器
+  - LINUX
+  - 服务器
 toc: true
-cover: "https://cdn.jsdelivr.net/gh/Nafoaix/pic-repo@master/cover/kiftd.png"
+cover: 'https://s2.loli.net/2022/08/15/8uYPber6cZgANd3.png'
+abbrlink: fb8823a1
 date: 2021-04-13 09:17:16
 ---
 
@@ -19,7 +20,7 @@ date: 2021-04-13 09:17:16
 ## 1.安装JAVA运行环境
 
 ```bash
-yum install java-11-openjdk-devel
+apt install java-11-openjdk-devel
 ```
 
 安装完成后查看版本，输出下面内容说明已经安装好。
@@ -34,7 +35,7 @@ OpenJDK 64-Bit Server VM 18.9 (build 11.0.9.1+1-LTS, mixed mode, sharing)
 CentOS 8还支持无头版本的OpenJDK，该版本提供了无需图形用户界面（不支持键盘，鼠标和显示系统）来执行应用程序所需的最少Java运行时，该版本具有更少的依赖性和更少的系统资源，因此它更适合于服务器应用程序。
 
 ```bash
-sudo yum install java-11-openjdk-headless
+sudo apt install java-11-openjdk-headless
 ```
 
 ## 2.下载kiftd包并解压

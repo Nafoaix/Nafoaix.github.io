@@ -7,7 +7,8 @@ categories:
   - 学习笔记
   - Git
 toc: true
-cover: "https://cdn.jsdelivr.net/gh/Nafoaix/myblog@master/source/images/cover/git.jpg"
+cover: 'https://s2.loli.net/2022/08/15/OTzNc8sHWi4YPnU.jpg'
+abbrlink: 3cb7cd1a
 date: 2020-04-17 16:52:59
 ---
 
@@ -96,11 +97,11 @@ _可以理解为一个小秘书来帮你打理你的项目，让你专注于项�
 
 ### 关于版本回退
 
-<pre>
+{% note info no-icon %}
                    -add->            -commit->
   WorkingDirectory ------ Stage(Index) ------ Repository(HEAD)
                  <-restore-          <-reset-
-</pre>
+{% endnote %}
 
 - 回滚指定快照
   `git reset 至少前5位的版本快照号`
